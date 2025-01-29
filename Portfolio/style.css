@@ -1,63 +1,116 @@
 body {
-    padding: 20px;
-    background-color: #EEF4D4;
-    font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+
+  background-color: #eef4d4;
+
+  font-size: 1.3em;
 }
 
-h1, h2, h3, h4, h5 {
-    color: #9F9FED;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #9f9fed;
+
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
 }
 
 p {
-    color: #1B1725;
-    line-height: 1.6;
+  color: #1b1725;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
 }
 
-#projects h1 {
-    width: 33%;
-    height: 200px;
-    background-color: #d5d8c6;
-    margin: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.border {
+  border: 2px solid #9f9fed;
+}
+
+.social-img {
+  width: 25%;
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.fun-header {
+  animation-name: fun-header;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes fun-header {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+  }
+}
+
+.fun-button {
+  transition: transform 0.1s ease;
+}
+
+.fun-button:hover {
+  transform: rotate(20deg);
+}
+
+img {
+  max-width: 100%;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial {
+  padding: 20px;
+  margin: 10px;
+  background-color: lightgray;
+  border: 1px solid #ddd;
+  transition: all 0.5s;
+}
+
+.testimonial-1 {
+    flex-grow: 1;
+}
+.testimonial-2 {
+    flex-grow: 2;
+    
+}
+.testimonial-3 {
+    flex-grow: 1;
+}
+
+.testimonial:hover {
+  /* flex-grow: 1.1; */
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 }
 
 #projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: center;
 }
 
-#cool-text h1 {
-    flex: 1;
-    text-align: center;
-}
-
-#cool-text h1:nth-child(1) { color: red; }
-#cool-text h1:nth-child(2) { color: green; }
-#cool-text h1:nth-child(3) { color: blue; }
-
-@media only screen and (max-width: 800px) {
-    #projects h1 {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    #cool-text {
-        flex-direction: column;
-    }
+.project-item {
+    border-radius: 5px;
+    margin: 5px;
+    padding: 15px;
+    background-color: rgb(235, 214, 176);
+    width: 25%;
 }
 
 @media only screen and (orientation: portrait) {
-    #projects h1 {
-        background-color: orangered;
+    .project-item {
+        width: 100%;
     }
 }
