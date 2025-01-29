@@ -99,6 +99,7 @@ img {
     flex-wrap: wrap;
     width: 100%;
     justify-content: center;
+    gap: 1rem;
 }
 
 .project-item {
