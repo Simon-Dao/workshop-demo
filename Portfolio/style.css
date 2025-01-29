@@ -133,20 +133,3 @@ img {
         width: 100%;
     }
 }
-
-@keyframes fun-header {
-    0% {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    100% { }
-}
-
-.fun-button {
-    transition: transform 0.1s ease;
-}
-
-.fun-button:hover {
-    transform: rotate(20deg);
-}
