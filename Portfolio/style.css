@@ -107,7 +107,25 @@ img {
     padding: 15px;
     background-color: rgb(235, 214, 176);
     width: 25%;
-}
+  
+    animation-name: shimmer;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1vh);
+      filter: drop-shadow(5px 5px 5px #4444dd);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
 @media only screen and (orientation: portrait) {
     .project-item {
